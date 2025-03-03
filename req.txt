@@ -1,0 +1,21 @@
+streamlit
+requests
+pandas  # If working with data
+matplotlib  # If visualizing data
+plotly  # Optional for interactive plots
+numpy  # Optional for numerical computations
+
+
+----- 
+Specific Version for image on docer deployment will be
+used for the following basic versions below: 
+
+
+streamlit==1.30.0
+requests==2.31.0
+pandas==2.1.4
+matplotlib==3.8.2
+plotly==5.17.0
+numpy==1.26.3
+
+
