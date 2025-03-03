@@ -12,10 +12,10 @@ A quick introduction to compilign API's to create a simple forecast for non-tehc
 ## 📦 project-deployment 
 
 ```plaintext 
- ┣ 📜 main.py            # Main application script  
- ┣ 📜 requirements.txt   # Dependencies  
- ┣ 📜 README.md          # Documentation  
- ┗ 📂 assets/            # (Optional) Static files 
+ ┣ 📜 main.py # Main app script  
+ ┣ 📜 req.txt   # Dependencies  
+ ┣ 📜 README.md  # Documentation  
+ ┗ 📂 assets/ # (Static files) 
 ``` 
 ---
 ## 🚀 Quick Summary
