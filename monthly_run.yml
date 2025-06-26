@@ -1,29 +1,11 @@
-name: Monthly EIA Data Update
+- name: Set up Miniconda
+  uses: conda-incubator/setup-miniconda@v3
+  with:
+    environment-file: environment.yml
+    auto-activate-base: false
+    activate-environment: your-env-name
 
-on:
-  schedule:
-    - cron: '0 0 1 * *'  # Run at 00:00 on the 1st of every month (UTC)
-  workflow_dispatch:     # Also allow manual trigger from GitHub UI
-
-jobs:
-  fetch-and-process:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Run data fetch script
-        env:
-          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
-        run: |
-          python scripts/fetch_eia_data.py
+- name: Run API script
+  env:
+    EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+  run: python api_read.py
